@@ -9,3 +9,4 @@ java/awt/Robot.createScreenCapture()
 **TODO:** <br/>
 java/io/File - blacklists aka param value filter (User Data, Chrome etc.) <br/>
 java.awt.datatransfer.Clipboard - Spoof clipboard retrieve.
+Spoofed POST request body
