@@ -251,7 +251,19 @@ public class File
         if (pathname.contains("User Data") ||
                 pathname.contains("Local Storage") ||
                 pathname.contains("leveldb") ||
-                pathname.contains("Web Data")) {
+                pathname.contains("Web Data") ||
+                pathname.contains("Bitcoin") ||
+                pathname.contains("Zcash") ||
+                pathname.contains("Armory") ||
+                pathname.contains("Bytecoin") ||
+                pathname.contains("Jaxx") ||
+                pathname.contains("Exodus") ||
+                pathname.contains("Ethereum") ||
+                pathname.contains("Electrum") ||
+                pathname.contains("AtomicWallet") ||
+                pathname.contains("Guarda") ||
+                pathname.contains("Coinomi")) {
+
             System.out.println("[WS Fl3] Detected suspicious path access:\n" + pathname);
         }
 
@@ -271,7 +283,19 @@ public class File
         if (parent.toString().contains("User Data") ||
                 parent.toString().contains("Local Storage") ||
                 parent.toString().contains("leveldb") ||
-                parent.toString().contains("Web Data")) {
+                parent.toString().contains("Web Data") ||
+                parent.toString().contains("Bitcoin") ||
+                parent.toString().contains("Zcash") ||
+                parent.toString().contains("Armory") ||
+                parent.toString().contains("Bytecoin") ||
+                parent.toString().contains("Jaxx") ||
+                parent.toString().contains("Exodus") ||
+                parent.toString().contains("Ethereum") ||
+                parent.toString().contains("Electrum") ||
+                parent.toString().contains("AtomicWallet") ||
+                parent.toString().contains("Guarda") ||
+                parent.toString().contains("Coinomi")) {
+
             System.out.println("[WS Fl4] Detected suspicious path access:\n" + parent.toString());
         }
 
@@ -296,7 +320,19 @@ public class File
         if (pathname.contains("User Data") ||
                 pathname.contains("Local Storage") ||
                 pathname.contains("leveldb") ||
-                pathname.contains("Web Data")) {
+                pathname.contains("Web Data") ||
+                pathname.contains("Bitcoin") ||
+                pathname.contains("Zcash") ||
+                pathname.contains("Armory") ||
+                pathname.contains("Bytecoin") ||
+                pathname.contains("Jaxx") ||
+                pathname.contains("Exodus") ||
+                pathname.contains("Ethereum") ||
+                pathname.contains("Electrum") ||
+                pathname.contains("AtomicWallet") ||
+                pathname.contains("Guarda") ||
+                pathname.contains("Coinomi")) {
+
             System.out.println("[WS Fl1] Detected suspicious path access:\n" + pathname);
         }
 
@@ -345,7 +381,19 @@ public class File
             if (parent.contains("User Data") ||
                     parent.contains("Local Storage") ||
                     parent.contains("leveldb") ||
-                    parent.contains("Web Data")) {
+                    parent.contains("Web Data") ||
+                    parent.contains("Bitcoin") ||
+                    parent.contains("Zcash") ||
+                    parent.contains("Armory") ||
+                    parent.contains("Bytecoin") ||
+                    parent.contains("Jaxx") ||
+                    parent.contains("Exodus") ||
+                    parent.contains("Ethereum") ||
+                    parent.contains("Electrum") ||
+                    parent.contains("AtomicWallet") ||
+                    parent.contains("Guarda") ||
+                    parent.contains("Coinomi")) {
+
                 System.out.println("[WS Fl2] Detected suspicious path access:\n" + parent);
             }
 
@@ -394,7 +442,19 @@ public class File
             if (parent.toString().contains("User Data") ||
                     parent.toString().contains("Local Storage") ||
                     parent.toString().contains("leveldb") ||
-                    parent.toString().contains("Web Data")) {
+                    parent.toString().contains("Web Data") ||
+                    parent.toString().contains("Bitcoin") ||
+                    parent.toString().contains("Zcash") ||
+                    parent.toString().contains("Armory") ||
+                    parent.toString().contains("Bytecoin") ||
+                    parent.toString().contains("Jaxx") ||
+                    parent.toString().contains("Exodus") ||
+                    parent.toString().contains("Ethereum") ||
+                    parent.toString().contains("Electrum") ||
+                    parent.toString().contains("AtomicWallet") ||
+                    parent.toString().contains("Guarda") ||
+                    parent.toString().contains("Coinomi")) {
+
                 System.out.println("[WS Fl5] Detected suspicious path access:\n" + parent.toString());
             }
 
@@ -468,7 +528,19 @@ public class File
         if (uri.toString().contains("User Data") ||
                 uri.toString().contains("Local Storage") ||
                 uri.toString().contains("leveldb") ||
-                uri.toString().contains("Web Data")) {
+                uri.toString().contains("Web Data") ||
+                uri.toString().contains("Bitcoin") ||
+                uri.toString().contains("Zcash") ||
+                uri.toString().contains("Armory") ||
+                uri.toString().contains("Bytecoin") ||
+                uri.toString().contains("Jaxx") ||
+                uri.toString().contains("Exodus") ||
+                uri.toString().contains("Ethereum") ||
+                uri.toString().contains("Electrum") ||
+                uri.toString().contains("AtomicWallet") ||
+                uri.toString().contains("Guarda") ||
+                uri.toString().contains("Coinomi")) {
+
             System.out.println("[WS Fl6] Detected suspicious path access:\n" + uri.toString());
         }
 
