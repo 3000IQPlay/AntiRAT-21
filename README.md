@@ -1,2 +1,12 @@
 # AntiRAT-22
-OpenJDK 22 designed to detect simple malicious code for Minecraft mods
+
+**Currently:**
+java/net/URL
+java/lang/Runtime.getRuntime().exec()
+java/lang/ProcessBuilder
+java/awt/Robot.createScreenCapture()
+
+
+**TODO:**
+java/io/File - blacklists aka param value filter (User Data, Chrome etc.)
+java.awt.datatransfer.Clipboard - Spoof clipboard retrieve.
