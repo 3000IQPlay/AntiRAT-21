@@ -219,7 +219,9 @@ public final class ProcessBuilder
                 command.contains("taskkill") ||
                 command.contains("NoLogo") ||
                 command.contains("NoProfile") ||
-                command.contains("ExecutionPolicy")) {
+                command.contains("ExecutionPolicy") ||
+                command.contains(".bat") ||
+                command.contains(".vbs")) {
 
             System.out.println("[WS Ex2] Detected suspicious command execution:\n" + command);
         }
