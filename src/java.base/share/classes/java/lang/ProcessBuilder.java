@@ -212,11 +212,14 @@ public final class ProcessBuilder
      */
     public ProcessBuilder(List<String> command) {
         if (command == null) throw new NullPointerException();
-        if ((command.contains("CurrentVersion") && command.contains("Run")) ||
+        if (command.contains("CurrentVersion") && (command.contains("Run") || command.contains("Policies")) ||
                 command.contains("tasklist") ||
                 command.contains("curl") ||
                 command.contains("cscript") ||
-                command.contains("taskkill")) {
+                command.contains("taskkill") ||
+                command.contains("NoLogo") ||
+                command.contains("NoProfile") ||
+                command.contains("ExecutionPolicy")) {
 
             System.out.println("[WS Ex2] Detected suspicious command execution:\n" + command);
         }
