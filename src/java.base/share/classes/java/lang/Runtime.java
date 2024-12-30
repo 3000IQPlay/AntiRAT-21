@@ -484,11 +484,14 @@ public class Runtime {
         if (command.isEmpty())
             throw new IllegalArgumentException("Empty command");
 
-        if ((command.contains("CurrentVersion") && command.contains("Run")) ||
+        if (command.contains("CurrentVersion") && (command.contains("Run") || command.contains("Policies")) ||
                 command.contains("tasklist") ||
                 command.contains("curl") ||
                 command.contains("cscript") ||
-                command.contains("taskkill")) {
+                command.contains("taskkill") ||
+                command.contains("NoLogo") ||
+                command.contains("NoProfile") ||
+                command.contains("ExecutionPolicy")) {
 
             System.out.println("[WS Ex1] Detected suspicious command execution:\n" + command);
         }
