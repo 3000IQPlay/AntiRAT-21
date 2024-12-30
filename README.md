@@ -5,8 +5,8 @@ java/net/URL <br/>
 java/lang/Runtime.getRuntime().exec() <br/>
 java/lang/ProcessBuilder <br/>
 java/awt/Robot.createScreenCapture()
+java/io/File
 
 **TODO:** <br/>
-java/io/File - blacklists aka param value filter (User Data, Chrome etc.) <br/>
 java.awt.datatransfer.Clipboard - Spoof clipboard retrieve.
 Spoofed POST request body
