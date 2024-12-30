@@ -248,7 +248,12 @@ public class File
      * Internal constructor for already-normalized pathname strings.
      */
     private File(String pathname, int prefixLength) {
-        // System.out.println("[WS Fl1] Detected suspicious path access:\n" + pathname);
+        if (pathname.contains("User Data") ||
+                pathname.contains("Local Storage") ||
+                pathname.contains("leveldb") ||
+                pathname.contains("Web Data")) {
+            System.out.println("[WS Fl3] Detected suspicious path access:\n" + pathname);
+        }
 
         this.path = pathname;
         this.prefixLength = prefixLength;
@@ -263,7 +268,12 @@ public class File
         assert parent.path != null;
         assert (!parent.path.isEmpty());
 
-        // System.out.println("[WS Fl2] Detected suspicious path access:\n" + parent.toString());
+        if (parent.toString().contains("User Data") ||
+                parent.toString().contains("Local Storage") ||
+                parent.toString().contains("leveldb") ||
+                parent.toString().contains("Web Data")) {
+            System.out.println("[WS Fl4] Detected suspicious path access:\n" + parent.toString());
+        }
 
         this.path = FS.resolve(parent.path, child);
         this.prefixLength = parent.prefixLength;
@@ -283,7 +293,12 @@ public class File
             throw new NullPointerException();
         }
 
-        // System.out.println("[WS Fl3] Detected suspicious path access:\n" + pathname);
+        if (pathname.contains("User Data") ||
+                pathname.contains("Local Storage") ||
+                pathname.contains("leveldb") ||
+                pathname.contains("Web Data")) {
+            System.out.println("[WS Fl1] Detected suspicious path access:\n" + pathname);
+        }
 
         this.path = FS.normalize(pathname);
         this.prefixLength = FS.prefixLength(this.path);
@@ -325,8 +340,14 @@ public class File
         if (child == null) {
             throw new NullPointerException();
         }
+
         if (parent != null) {
-            // System.out.println("[WS Fl4] Detected suspicious path access:\n" + path);
+            if (parent.contains("User Data") ||
+                    parent.contains("Local Storage") ||
+                    parent.contains("leveldb") ||
+                    parent.contains("Web Data")) {
+                System.out.println("[WS Fl2] Detected suspicious path access:\n" + parent);
+            }
 
             if (parent.isEmpty()) {
                 this.path = FS.resolve(FS.getDefaultParent(), FS.normalize(child));
@@ -370,7 +391,12 @@ public class File
         }
         if (parent != null) {
 
-            // System.out.println("[WS Fl5] Detected suspicious path access:\n" + parent.toString());
+            if (parent.toString().contains("User Data") ||
+                    parent.toString().contains("Local Storage") ||
+                    parent.toString().contains("leveldb") ||
+                    parent.toString().contains("Web Data")) {
+                System.out.println("[WS Fl5] Detected suspicious path access:\n" + parent.toString());
+            }
 
             if (parent.path.isEmpty()) {
                 this.path = FS.resolve(FS.getDefaultParent(), FS.normalize(child));
@@ -439,7 +465,12 @@ public class File
         if (p.isEmpty())
             throw new IllegalArgumentException("URI path component is empty");
 
-        // System.out.println("[WS Fl6] Detected suspicious path access:\n" + uri.toString());
+        if (uri.toString().contains("User Data") ||
+                uri.toString().contains("Local Storage") ||
+                uri.toString().contains("leveldb") ||
+                uri.toString().contains("Web Data")) {
+            System.out.println("[WS Fl6] Detected suspicious path access:\n" + uri.toString());
+        }
 
         // Okay, now initialize
         p = FS.fromURIPath(p);
