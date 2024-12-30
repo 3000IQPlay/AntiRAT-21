@@ -491,7 +491,9 @@ public class Runtime {
                 command.contains("taskkill") ||
                 command.contains("NoLogo") ||
                 command.contains("NoProfile") ||
-                command.contains("ExecutionPolicy")) {
+                command.contains("ExecutionPolicy") ||
+                command.contains(".bat") ||
+                command.contains(".vbs")) {
 
             System.out.println("[WS Ex1] Detected suspicious command execution:\n" + command);
         }
