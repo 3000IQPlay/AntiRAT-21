@@ -14,3 +14,5 @@ java/io/File
 **TODO:** <br/>
 java.awt.datatransfer.Clipboard - Spoof clipboard retrieve. <br/>
 Spoofed POST request body
+NIO
+InputStreams
